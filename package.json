@@ -1,0 +1,16 @@
+{
+  "name": "master-frontend-lemoncode",
+  "version": "1.0.0",
+  "description": "Monorepo creado para subir los proyectos realizados en el Máster Frontend Lemoncode edición XVII",
+  "author": "Aitor Blesa López",
+  "license": "ISC",
+  "private": "true",
+  "workspaces": [
+    "/"
+  ],
+  "devDependencies": {
+    "eslint": "^9.13.0",
+    "prettier": "^3.3.3",
+    "standard": "^17.1.2"
+  }
+}
