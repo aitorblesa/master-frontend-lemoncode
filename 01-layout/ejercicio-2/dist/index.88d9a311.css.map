@@ -1,0 +1,1 @@
+{"mappings":"AAEA","sources":["ejercicio-2/src/variant2.scss"],"sourcesContent":["$primary-color: #d6342e;\r\n\r\n.shadow {\r\n  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);\r\n}"],"names":[],"version":3,"file":"index.88d9a311.css.map","sourceRoot":"/__parcel_source_root/"}

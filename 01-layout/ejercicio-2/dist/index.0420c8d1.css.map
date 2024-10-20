@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;AAIA","sources":["ejercicio-2/src/variant1.scss"],"sourcesContent":[".shadow {\r\n  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.8);\r\n}\r\n\r\n.secondary {\r\n  font-family: 'Roboto', sans-serif;\r\n}"],"names":[],"version":3,"file":"index.0420c8d1.css.map","sourceRoot":"/__parcel_source_root/"}
