@@ -26,6 +26,7 @@ Estas son algunas de las tecnologías que utilizamos en el máster:
 │   └── ...
 │   ...
 └── README.md
+```
 
 ## 📚 Recursos Útiles
 
@@ -33,4 +34,4 @@ Estas son algunas de las tecnologías que utilizamos en el máster:
 - [Documentación Oficial de TypeScript](https://www.typescriptlang.org/)
 - [Curso del Máster en Lemoncode](https://lemoncode.net/)
 
-⌨️ con ❤️ por [Aitor](https://github.com/aitor95)
+<p align="center">⌨️ con ❤️ por <a href="https://github.com/aitor95">Aitor</a> </p>
