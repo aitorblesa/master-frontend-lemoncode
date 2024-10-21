@@ -1,9 +1,5 @@
 # Master Frontend Lemoncode 🧑‍💻
 
-![GitHub repo size](https://img.shields.io/github/repo-size/aitor95/master-frontend-lemoncode?color=blue&style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/aitor95/master-frontend-lemoncode?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/aitor95/master-frontend-lemoncode?style=social)
-
 > Repositorio de ejercicios y proyectos del Máster en Frontend con Lemoncode
 
 ## 🚀 Tecnologías
