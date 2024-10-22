@@ -30,6 +30,7 @@ body {
   "footer footer";
   min-height: 100vh;
   background-color: $bg-color;
+  min-width: 450px;
 }
 
 input {
@@ -72,23 +73,27 @@ header {
 aside {
   grid-area: aside;
   border-right: 1px solid $primary-color;
-  position: sticky;
-  top: 0;
-  background-color: aqua;
+  background-color: $accent-color;
 
+  & nav {
+    position: sticky;
+    top: 0;
+  }
+  
+  
   & nav ul li {
     list-style: none;
-
+    
     & a {
       text-decoration: none;
-      color: $black-color;
+      color: $white-color;
     }
   }
-
+  
   & nav h2 {
     padding: 20px;
-
     text-transform: uppercase;
+    color: $white-color;
   }
   
   & nav ul {
@@ -98,19 +103,24 @@ aside {
     & li {
       padding: 10px 20px;
       transition: background-color 0.3s ease;
+      background-color: color.scale($primary-color, $lightness: 30%);
 
       &:hover {
         cursor: pointer;
-        background-color: color.scale($primary-color, $lightness: 30%);
       }
     }
   }
 }
 
+// Las lineas comentadas es para hacer responsive las cards
+// aunque no se centran respecto al eje horizontal las últimas
+
 main {
   grid-area: main;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  // display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   align-content: center;
@@ -118,8 +128,10 @@ main {
 }
 
 main article {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  width: 300px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,4 +154,40 @@ footer {
   padding: 20px;
   background-color: $primary-color;
   color: $white-color;
+}
+
+@media (width <= 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "aside"
+    "main"
+    "footer";
+  }
+  header{
+    padding-top: inherit;
+    
+    & nav {
+      display: none;
+    }
+  } 
+
+  aside {
+    position: sticky;
+    top: 0;
+  }
+  aside nav {
+    position: inherit;
+  }
+  aside nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  aside nav h2{
+    display: none;
+  }
+
+
 }

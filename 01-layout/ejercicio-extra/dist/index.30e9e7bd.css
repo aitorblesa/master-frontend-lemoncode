@@ -23,6 +23,7 @@ body {
                  "aside main" 1fr
                  "footer footer"
                  / auto 1fr;
+  min-width: 450px;
   min-height: 100vh;
   display: grid;
 }
@@ -63,9 +64,12 @@ header h1 {
 }
 
 aside {
-  background-color: #0ff;
+  background-color: #4200a3;
   border-right: 1px solid #9147ff;
   grid-area: aside;
+}
+
+aside nav {
   position: sticky;
   top: 0;
 }
@@ -75,12 +79,13 @@ aside nav ul li {
 }
 
 aside nav ul li a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
 aside nav h2 {
   text-transform: uppercase;
+  color: #fff;
   padding: 20px;
 }
 
@@ -90,22 +95,22 @@ aside nav ul {
 }
 
 aside nav ul li {
+  background-color: #b27eff;
   padding: 10px 20px;
   transition: background-color .3s;
 }
 
 aside nav ul li:hover {
   cursor: pointer;
-  background-color: #b27eff;
 }
 
 main {
+  flex-wrap: wrap;
   grid-area: main;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   place-content: center;
   gap: 20px;
   padding: 20px;
-  display: grid;
+  display: flex;
 }
 
 main article {
@@ -115,8 +120,8 @@ main article {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: auto;
   padding: 20px;
   display: flex;
 }
@@ -133,5 +138,42 @@ footer {
   background-color: #9147ff;
   grid-area: footer;
   padding: 20px;
+}
+
+@media (width <= 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "aside"
+                         "main"
+                         "footer";
+  }
+
+  header {
+    padding-top: inherit;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  aside {
+    position: sticky;
+    top: 0;
+  }
+
+  aside nav {
+    position: inherit;
+  }
+
+  aside nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  aside nav h2 {
+    display: none;
+  }
 }
 /*# sourceMappingURL=index.30e9e7bd.css.map */
