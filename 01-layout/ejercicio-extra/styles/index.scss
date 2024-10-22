@@ -1,0 +1,145 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 
+  "header header"
+  "aside main"
+  "footer footer";
+  min-height: 100vh;
+  background-color: $bg-color;
+}
+
+input {
+  border: none;
+  padding: 10px;
+  border-radius: $border-5;
+
+  &:focus-visible {
+    outline: 1px solid $primary-color;
+  }
+}
+
+
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+
+  & nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    & p {
+      align-self: end;
+    }
+  }
+
+  & h1 {
+    padding: 10px 20px;
+    background-color: color.scale($primary-color, $lightness: 80%);
+    color: $primary-color;
+  }
+
+}
+
+aside {
+  grid-area: aside;
+  border-right: 1px solid $primary-color;
+  position: sticky;
+  top: 0;
+  background-color: aqua;
+
+  & nav ul li {
+    list-style: none;
+
+    & a {
+      text-decoration: none;
+      color: $black-color;
+    }
+  }
+
+  & nav h2 {
+    padding: 20px;
+
+    text-transform: uppercase;
+  }
+  
+  & nav ul {
+    display: flex;
+    flex-direction: column;
+    
+    & li {
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: color.scale($primary-color, $lightness: 30%);
+      }
+    }
+  }
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+}
+
+main article {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid $primary-color;
+  padding: 20px;
+  border-radius: $border-5;
+  background-color: $white-color;
+
+  & img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+}
+
+footer {
+  grid-area: footer;
+  padding: 20px;
+  background-color: $primary-color;
+  color: $white-color;
+}
