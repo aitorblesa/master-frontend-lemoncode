@@ -104,6 +104,10 @@ aside nav ul li:hover {
   cursor: pointer;
 }
 
+aside nav ul li:not(:last-child) {
+  border-bottom: 1px solid #4200a3;
+}
+
 main {
   flex-wrap: wrap;
   grid-area: main;
