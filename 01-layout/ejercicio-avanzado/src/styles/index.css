@@ -78,6 +78,11 @@ main {
   gap: 10px;
 }
 
+/*
+  flex: 1 1 250px;
+  Define el flex-grow (1) y flex-shrink (1) para que el elemento se expande o contrae en función de la cantidad de espacio disponible.
+  Por último, flex-basis (250px) define el tamaño inicial del elemento.
+*/
 .first .item {
   flex: 1 1 250px;
 }
