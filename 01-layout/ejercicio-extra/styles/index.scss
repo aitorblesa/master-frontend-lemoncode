@@ -84,6 +84,9 @@ aside {
   & nav ul li {
     list-style: none;
     
+    &:hover{
+      background-color: color.scale($accent-color, $lightness: 50%);
+    }
     & a {
       text-decoration: none;
       color: $white-color;
