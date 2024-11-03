@@ -96,9 +96,8 @@ main {
 }
 
 .second .item {
-  min-width: 250px;
   width: 100%;
-  flex: 1 1 0;
+  flex: 1 1 250px;
 }
 
 .top-item,
