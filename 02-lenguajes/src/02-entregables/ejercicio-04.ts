@@ -6,13 +6,18 @@ console.log("************** DELIVERABLE 04 *********************");
  TIP: Existe un método de Array.prototype que te ayudará a buscar según un patrón.
  */
 
-const books = [
+interface Book {
+  title: string;  
+  isRead: boolean;
+}
+
+const books: Book[] = [
   { title: "Harry Potter y la piedra filosofal", isRead: true },
   { title: "Canción de hielo y fuego", isRead: false },
   { title: "Devastación", isRead: true },
 ];
 
-function isBookRead(books, titleToSearch) {
+function isBookRead(books: Book[], titleToSearch: string): boolean {
   const bookToFind = books.find(book => book.title === titleToSearch);
   return bookToFind?.isRead ?? false;
 }
