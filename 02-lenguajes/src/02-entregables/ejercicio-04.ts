@@ -9,7 +9,7 @@ console.log("************** DELIVERABLE 04 *********************");
 interface Book {
   title: string;  
   isRead: boolean;
-}
+};
 
 const books: Book[] = [
   { title: "Harry Potter y la piedra filosofal", isRead: true },

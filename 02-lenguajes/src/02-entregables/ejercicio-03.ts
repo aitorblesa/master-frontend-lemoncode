@@ -21,7 +21,7 @@ const persona = {
   name: "Juan",
   age: 30,
   hobbies: "Padel"
-}
+};
 
 function clone(source) {
   return {...source};
@@ -39,7 +39,7 @@ devuelva un nuevo objeto con todas las propiedades de target y de source,
 y en caso de propiedades con el mismo nombre, source sobreescribe a target.
 */
 
-console.log("-------- MERGE --------")
+console.log("-------- MERGE --------");
 
 const merge = (source, target) => {
   const clonedTarget = clone(target);

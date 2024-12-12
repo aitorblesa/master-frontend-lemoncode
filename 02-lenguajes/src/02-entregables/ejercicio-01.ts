@@ -1,20 +1,20 @@
 console.log("************** DELIVERABLE 01 *********************");
 
-const myArray: string[] = ['🐒', '🐓', '🐖', '🐕', '🐎']
-console.log("Array Inicial: ", myArray)
+const myArray: string[] = ['🐒', '🐓', '🐖', '🐕', '🐎'];
+console.log("Array Inicial: ", myArray);
 /* ------------------------------------- HEAD --------------------------------------------------- */
 
 /*
   Implementa una función head (inmutable), tal que, dado un array como entrada,
   extraiga y devuelva su primer elemento. Utiliza destructuring.
 */
-console.log("-------- HEAD --------")
+console.log("-------- HEAD --------");
 
 // const myArray = ['🐒', '🐓', '🐖', '🐕', '🐎']
 
-const head = (first) => console.log(first);
+const head = ([first]: string[]) => first;
 
-head(myArray)
+console.log(head(myArray));
 
 /* ------------------------------------- TAIL --------------------------------------------------- */
 
@@ -23,7 +23,7 @@ head(myArray)
   devuelta todos menos el primer elemento. Utiliza rest operator.
 */
 
-console.log("-------- TAIL --------")
+console.log("-------- TAIL --------");
 // const myArray = ['🐒', '🐓', '🐖', '🐕', '🐎']
 
 // const head = (array) => {
@@ -31,8 +31,8 @@ console.log("-------- TAIL --------")
 //   console.log(allButOneArray)
 // };
 
-const tail = ([, ...allButOneArray]) => console.log([...allButOneArray])
-tail(myArray)
+const tail = ([, ...allButOneArray]) => [...allButOneArray];
+console.log(tail(myArray));
 
 /* ------------------------------------- INIT --------------------------------------------------- */
 
@@ -41,16 +41,12 @@ tail(myArray)
   devuelva todos los elementos menos el último. Utiliza los métodos que ofrece Array.prototype.
 */
 
-console.log("-------- INIT --------")
+console.log("-------- INIT --------");
 // const myArray = ['🐒', '🐓', '🐖', '🐕', '🐎']
 
-const init = (array) => {
-  const newArray = [...array]
-  const lastElement = newArray.pop()
-  console.log(newArray)
-}
+const init = (array: string[]) => array.slice(0,-1); 
 
-init(myArray)
+console.log(init(myArray));
 
 /* ------------------------------------- LAST --------------------------------------------------- */
 
@@ -60,7 +56,7 @@ init(myArray)
 */
 
 // const myArray = ['🐒', '🐓', '🐖', '🐕', '🐎']
-console.log("-------- LAST --------")
-const last = (array) => console.log([...array].pop())
+console.log("-------- LAST --------");
+const last = (array: string[]) => array.slice(-1);
 
-last(myArray)
+console.log(last(myArray));
