@@ -25,7 +25,7 @@ class SlotMachine {
     const num2 = Math.random() < 0.5;
     const num3 = Math.random() < 0.5;
   
-    if (num1 === num2 && num1 === num3 && num1 || num2 || num3 ) { 
+    if (num1 && num2 && num3) { 
       console.log(`Congratulations!!!. You won ${this.counter} coins!!`);
       this.counter = 0;
     } else {
