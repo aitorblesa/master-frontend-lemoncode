@@ -9,13 +9,13 @@ devuelva un nuevo objeto con las propiedades de source
 
 console.log("-------- CLONE --------")
 
-const myObject = {
-  name: "Lemoncode",
-  age: 25,
-  isStudent: true,
-  courses: ["Frontend", "Backend", "FullStack"],
-  languages: ["Javascript", "TypeScript", "Python"],
-};
+//  const myObject = {
+//   name: "Lemoncode",
+//   age: 25,
+//   isStudent: true,
+//   courses: ["Frontend", "Backend", "FullStack"],
+//   languages: ["Javascript", "TypeScript", "Python"],
+// };
 
 const persona = {
   name: "Juan",
