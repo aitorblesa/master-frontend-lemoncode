@@ -1,13 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-
 import { useMembers } from "../hooks/useMembers";
-
-// interface MemberEntity {
-//   id: string;
-//   login: string;
-//   avatar: string;
-// }
+import { MemberEntity } from "../models/member";
 
 export function ListMembers() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -41,10 +35,10 @@ export function ListMembers() {
       </header>
       <div className="list">
         <ul>
-          {members.map(({ id, login, avatar }) => (
-            <li key={id}>
-              <img src={avatar} alt={login} />
-              <Link to={`/detail/${login}`}>{login}</Link>
+          {members.map((member: MemberEntity) => (
+            <li key={member.id}>
+              <img src={member.avatar} alt={member.login} />
+              <Link to={`/detail/${member.login}`}>{member.login}</Link>
             </li>
           ))}
         </ul>

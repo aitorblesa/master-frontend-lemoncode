@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { searchMembers } from "../services/members.js";
+import { MemberEntity } from "../models/member.jsx";
+
 
 export function useMembers({ search }) {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState<MemberEntity[]>([]);
   const [error, setError] = useState(null);
 
   const getMembers = async () => {
