@@ -1,0 +1,14 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 128px;
+  border-radius: 5px;
+  gap: 8px;
+
+  > input,
+  button {
+    padding: 8px;
+  }
+}

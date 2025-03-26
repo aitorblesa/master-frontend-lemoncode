@@ -1,0 +1,9 @@
+@if (isLoggedIn) {
+<div>
+  <p>Bienvenido, {{ username }}!</p>
+  <button (click)="onLogout()">Logout</button>
+</div>
+
+} @else {
+<p>Esta es la cabecera de la aplicación sin usuario</p>
+}

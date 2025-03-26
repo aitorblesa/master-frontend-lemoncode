@@ -1,0 +1,26 @@
+$base-margin: 16px;
+
+ul {
+  padding: $base-margin;
+  display: flex;
+  color: black;
+  margin-top: calc(2 * $base-margin);
+
+  & li {
+    list-style: none;
+
+    & a {
+      text-decoration: none;
+      padding: $base-margin;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+
+.selected {
+  border-bottom: 1px solid black;
+}

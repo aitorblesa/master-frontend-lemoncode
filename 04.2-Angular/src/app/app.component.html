@@ -1,0 +1,9 @@
+<main>
+  <app-header />
+  @if(isLoggedIn){
+  <app-private-menu></app-private-menu>
+  } @else {
+  <app-menu></app-menu>
+  }
+  <router-outlet></router-outlet>
+</main>

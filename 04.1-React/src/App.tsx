@@ -1,21 +1,8 @@
-import { ListMembers } from "./components/ListMembers";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { DetailPage } from "./detail";
+import { AppRouter } from "@/router";
 import "./App.css";
 
 function App() {
-  return (
-    <div>
-      <main>
-        <Router>
-          <Routes>
-            <Route path="/" element={<ListMembers />} />
-            <Route path="/detail/:id" element={<DetailPage />} />
-          </Routes>
-        </Router>
-      </main>
-    </div>
-  );
+  return <AppRouter />;
 }
 
 export default App;
