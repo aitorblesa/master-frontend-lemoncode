@@ -1,0 +1,27 @@
+{
+  "name": "07-cloud-laboratorio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite --port 8080",
+    "build": "npm run type-check && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Aitor",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "gh-pages": "^6.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}

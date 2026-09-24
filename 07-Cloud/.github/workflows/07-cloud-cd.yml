@@ -1,0 +1,52 @@
+name: 07-Cloud CD
+
+# se lanza con cada push/merge a main, pero solo si cambia algo de la carpeta 07-Cloud
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '07-Cloud/**'
+      - '.github/workflows/07-cloud-cd.yml'
+  # para poder lanzarlo a mano desde la pestaña Actions
+  workflow_dispatch:
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # el proyecto no esta en la raiz del repo, asi que todos los comandos se ejecutan dentro de 07-Cloud
+    defaults:
+      run:
+        working-directory: 07-Cloud
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: 07-Cloud/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: 07-Cloud/dist
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
